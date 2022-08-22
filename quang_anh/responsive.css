@@ -1,0 +1,109 @@
+
+
+@media(min-width: 992px){
+    .hide-on-pc {
+        display: none;
+    }
+
+} 
+@media(max-width: 992px){
+    .block-story__content{
+        height: 1132px;
+        width: 382px;
+        background-image: url('./img/svg/paper-long.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%; 
+        padding: 58px 34px 76px;
+        position: relative;
+    }
+    .block-story__content--tree-bottom{
+        width: 215px;
+        height: 258px;
+        position: absolute;
+        right: -7px;
+        bottom: -85px;
+      }
+      .block-story__content--tree-top
+      {    
+        position: absolute;
+        top: -34px;
+        left: -18px;
+        width: 174px;
+      }
+
+} 
+@media (min-width: 768px) and (max-width: 992px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__main-img{
+        width: 446px;
+        height: auto;
+        margin-bottom: 270px;
+    }
+    .header__main-img-wrap{
+        padding-top: 89px;
+    }
+    .header{
+        height: 790px;
+    }
+    
+}
+@media (min-width: 414px) and (max-width: 768px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .header{
+        height: 790px;
+        background-position: 50% -128px;
+    }
+    .header__main-img{
+        width: 329px;
+        height: 169px;
+        margin-bottom: 240px
+    }
+    .header__main-img-wrap{
+        padding-top: 89px;
+    }
+    .header__download{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__download--app-store{
+        margin-right: 0;
+        margin-bottom: 17px;
+    }
+    .title-content img{
+        width: 281px;
+    }
+}
+@media(max-width:414px){
+    .header{
+        height: 790px;
+        background-position: 50% -128px;
+    }
+    .header__main-img{
+        width: 329px;
+        height: 169px;
+        margin-bottom: 240px
+    }
+    .header__main-img-wrap{
+        padding-top: 89px;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+    .header__download{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__download--app-store{
+        margin-bottom: 17px;
+        margin-right: 0;
+    }
+    .title-content img{
+        width: 281px;
+    }
+
+}
