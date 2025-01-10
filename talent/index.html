@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./base.css"></link>
+    <link rel="stylesheet" href="./responsive.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Document</title>
+</head>
+
+<body class="">
+    <!-- <header class="fixed-top"> -->
+    <div class="navbar fixed-top navbar-expand-lg container-lg py-0">
+        <div class="container ta-navbar py-2 px-3">
+            <div>
+                <div class="d-flex ta-navbar__logo align-items-center">
+                    <img class="ta-navbar__logo--img " src="./imgs/Logo.png" alt="">
+                    <a class="navbar-brand md-body medium" href="#">talent</a>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn primary-btn small sm-body semi me-2 d-block d-lg-none">Request for demo</button>
+                <button class="navbar-toggler d-lg-none px-2 py-1 small" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link md-body medium " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown mx-2">
+                        <button class="nav-link md-body medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Feature   
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item md-body medium" href="#">Feature 1</a></li>
+                            <li><a class="dropdown-item md-body medium" href="#">Feature 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link md-body medium" aria-disabled="true" href="#">Blogs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link md-body medium" aria-disabled="true" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link md-body medium" aria-disabled="true" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn d-none d-lg-block primary-btn  sm-body semi ">Request for demo</button>
+        </div>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center d-lg-none" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link md-body medium " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-2">
+                    <button class="nav-link md-body medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Feature   
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+                    <ul class="dropdown-menu ">
+                        <li><a class="dropdown-item md-body medium" href="#">Feature 1</a></li>
+                        <li><a class="dropdown-item md-body medium" href="#">Feature 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link md-body medium" aria-disabled="true" href="#">Blogs</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link md-body medium" aria-disabled="true" href="#">Pricing</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link md-body medium" aria-disabled="true" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- </header> -->
+    <div class="container" style="margin-top:80px">
+        <div id="overlay-content"></div>
+        <header class="ta-header effect-show ">
+            <div class="header__title">
+                <h2 class="bold">Your AI-Powered Partner for Smarter, Faster, and Fairer Hiring </h2>
+                <img class="header__title--img w-25" src="./imgs/Underline_06.png" alt="">
+            </div>
+            <p class="lg-body regular mt-2 text-center">Hiring is a team game. talent helps you win!</p>
+            <button class="primary-btn sm-body semi">Start Now</button>
+            <img class="ta-header__img" src="./imgs/banner4.png" alt="">
+
+        </header>
+        <div class="ta-our-story effect-show">
+            <div class="title-section">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">Our Story</span>
+                </div>
+                <h4 class="bold ">“When Technology Meets Humanity: The Story of talent”</h4>
+
+            </div>
+
+            <div class="list-card">
+                <div class="card-item  ">
+                    <h3 class="card-item__title medium">Our story</h3>
+                    <p class="card-item__content sm-body regular">We are proud of being an innovative breakthrough in the use of AI for talent evaluation, recruitment management, process digitization, manual labor optimization, and talent recruitment. With advanced data analytics, automation, and
+                        machine learning technologies, talent helps create genuine connections based on skill and cultural fit, ensuring satisfaction for both job seekers and employers. </p>
+                    <img class="card-item__img" src="./imgs/ourstory1.svg" alt="ourstory-img">
+                </div>
+                <div class="card-item  ">
+                    <img class="card-item__img d-none d-lg-block" src="./imgs/ourstory2.svg" alt="ourstory-img">
+                    <h3 class="card-item__title medium">Our Mission</h3>
+                    <p class="card-item__content sm-body regular">Our mission is to revolutionize the hiring process through cutting-edge AI technology, ensuring businesses of all sizes can efficiently and ethically connect with top talent. We are committed to providing an exceptional user experience
+                        and unparalleled AI quality, transforming recruitment into a seamless, efficient, and secure journey.</p>
+                    <img class="card-item__img d-block d-lg-none" src="./imgs/ourstory2.svg" alt="ourstory-img">
+
+                </div>
+                <div class="card-item  ">
+                    <h3 class="card-item__title medium">Our Vision</h3>
+                    <p class="card-item__content sm-body regular">Our vision is to become the go-to AI-powered hiring platform, recognized for our trustworthiness, innovation, and dedication to enhancing the recruitment & management experience. We aim to set new standards in AI-driven hiring, helping
+                        organizations thrive by simplifying and optimizing their talent acquisition processes.</p>
+                    <img class="card-item__img" src="./imgs/ourstory3.svg" alt="ourstory-img">
+                </div>
+            </div>
+        </div>
+        <div class="ta-features effect-show">
+            <div class="title-section">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">Features</span>
+                </div>
+                <h4 class="bold ">ATS with Standout Features</h4>
+            </div>
+
+
+            <div class="ta-features__content d-flex flex-column">
+                <div class="ta-features__content--left  d-flex flex-column">
+                    <div class="card-item-1  d-flex flex-row ">
+                        <div class="d-flex flex-column card-item-1__content w-sm-50">
+                            <h5 class="medium card-item-1__content--title">Advanced Screening, Parsing & Scoring</h5>
+                            <p class="md-body regular card-item__content card-item-1__content--description">
+                                Screen, parse, and score candidates by visualizing profiles against job requirements and using the HEICA chatbot for deeper analysis.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center wrapper-new-card-item-1">
+                            <div class="new-card-item-1__img mt-3 mt-sm-0">
+                                <img class="img-1" src="./imgs/effect/ft1-img1.svg" alt="">
+                                <div class="wrapper-img-2-3">
+                                    <img class="img-2" src="./imgs/effect/ft1-img2.svg" alt="">
+                                    <img class="img-3" src="./imgs/effect/ft1-img3.svg" alt="">
+                                </div>
+                                <img class="img-4" src="./imgs/effect/ft1-img4.svg" alt="">
+                                <img class="img-5" src="./imgs/effect/ft1-img5.svg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row flex-wrap wappper-card-item justify-content-sm-between">
+                        <div class="d-flex flex-column card-item-23 ">
+                            <div class="card-item-2">
+                                <h5 class="medium card-item-2__content--title">Seamless Integrations</h5>
+                                <p class="md-body regular card-item__content card-item-2__content--description">
+                                    Synchronize work schedules & Integrate with other enterprise systems
+                                </p>
+                                <div class="d-flex justify-content-end align-items-center wrapper-new-card-item-2">
+                                    <div class="d-flex justify-content-end mt-2 new-card-item-2__img">
+                                        <img class="me-2 img-sign" src="./imgs/feature2.svg" alt="">
+                                        <div class="img-list-item">
+                                            <img src="./imgs/effect//ft2-img-2.svg" alt="">
+                                            <img src="./imgs/effect//ft2-img-3.svg" alt="">
+                                            <img src="./imgs/effect//ft2-img-4.svg" alt="">
+                                            <img src="./imgs/effect//ft2-img-5.svg" alt="">
+                                            <img src="./imgs/effect//ft2-img-6.svg" alt="">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-item-3">
+                                <h5 class="medium card-item-3__content--title">Report</h5>
+                                <p class="md-body regular card-item__content card-item-3__content--description">
+                                    Generate individualized reports, analyze recruitment data for trends, enable ad hoc reporting & boolean search, provide real-time metrics.
+                                </p>
+                                <div class="d-flex justify-content-end new-card-item-3__img">
+                                    <!-- <div class="custom-list-img"> -->
+                                        <img class="img-4" src="./imgs/effect/ft3-img-4.svg" alt="">
+                                        <img class="img-1" src="./imgs/effect/ft3-img-1.svg" alt="">
+                                        <img class="img-2" src="./imgs/effect/ft3-img-2.svg" alt="">
+                                        <img class="img-3" src="./imgs/effect/ft3-img-3.svg" alt="">
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-column card-item-45 ">
+                            <div class="card-item-4">
+                                <h5 class="medium card-item-4__content--title">Automation</h5>
+                                <p class="md-body regular card-item__content card-item-4__content--description">
+                                    AI generates JD, interview questions, assessment tests, auto-recording, auto-transcribing & auto-summarizing </p>
+                                <div class="d-flex justify-content-start new-card-item-4__img">
+                                    <img class="img-5" src="./imgs/effect/ft4-img-5.svg" alt="">
+                                    <img class="img-1" src="./imgs/effect/ft4-img-1.svg" alt="">
+                                    <img class="img-2" src="./imgs/effect/ft4-img-2.svg" alt="">
+                                    <img class="img-3" src="./imgs/effect/ft4-img-3.svg" alt="">
+                                    <img class="img-4" src="./imgs/effect/ft4-img-4.svg" alt="">
+
+                                </div>
+                            </div>
+                            <div class="card-item-5 ">
+                                <div class="d-flex justify-content-end w-100 wrapper-img">
+                                    <img class="" src="./imgs/feature5_1.svg" alt="">
+                                    <img class="" src="./imgs/feature5_2.svg" alt="">
+                                </div>
+                                <h5 class="medium card-item-5__content--title">Ethical AI Practices</h5>
+                                <p class="md-body regular card-item__content card-item-5__content--description">
+                                    Use AI algorithms to eliminate bias, protect personal data, and comply with privacy and industry regulations.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="ta-features__content--right">
+                    <div class="card-item-6  ">
+                        <div class="d-flex justify-content-start new-card-item-6__img">
+                            <img class="img-1" src="./imgs/effect/ft6-img-1.svg" alt="">
+                            <img class="img-2" src="./imgs/effect/ft6-img-2.svg" alt="">
+                            <img class="img-3" src="./imgs/effect/ft6-img-3.svg" alt="">
+                            <img class="img-4" src="./imgs/effect/ft6-img-4.svg" alt="">
+                        </div>
+                        <h5 class="medium card-item-6__content--title">AI-Driven Talent Pool</h5>
+                        <p class="md-body regular card-item__content card-item-6__content--description">
+                            Rank CVs based on AI matching scores, extract key information to create CV bank, and use HEICA chatbot prompts to filter directly. </p>
+
+                    </div>
+                    <div class="card-item-7 ">
+
+                        <h5 class="medium card-item-7__content--title">Remote/Hybrid Onboarding Support</h5>
+                        <p class="md-body regular card-item__content card-item-7__content--description">
+                            AI offers visa application procedures, tax implications, legal requirements, training modules and company policies for remote/ globally distributed candidates.
+                        </p>
+                        <div class="d-flex justify-content-end new-card-item-7__img">
+                            <img class="img-5" src="./imgs/effect/ft7-img-5.svg" alt="">
+                            <img class="img-4" src="./imgs/effect/ft7-img-4.svg" alt="">
+                            <img class="img-1" src="./imgs/effect/ft7-img-1.svg" alt="">
+                            <img class="img-2" src="./imgs/effect/ft7-img-2.svg" alt="">
+                            <img class="img-3" src="./imgs/effect/ft7-img-3.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="ta-features-compare mt-lg-5">
+                <div class="w-100 top-background"></div>
+                <div class="compare-content">
+                    <div class="d-flex flex-column flex-lg-row justify-content-between">
+                        <div class="title-left">
+                            <img src="./imgs/Icon-section-300.svg" alt="">
+                            <span class="lg-caption-up semi caption-text">Comparison</span>
+                            <h4 class="bold mt-2">Optimize your hiring process with talent</h4>
+
+                        </div>
+                        <div class="title-right">
+                            <p class="md-body regular">Streamline, enhance, and transform your recruitment strategy with our AI-powered platform</p>
+                            <button class="d-none d-lg-block primary-btn btn-inline sm-body semi">Learn More  
+                                <i class="fa-solid fa-arrow-right ms-1 arrow-icon"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    <button class="d-lg-none primary-btn btn-inline sm-body semi">Learn More  
+                        <i class="fa-solid fa-arrow-right ms-1 arrow-icon"></i>
+                    </button>
+                    <div class="compare-table row">
+                        <div class="without-talent col-10 col-sm-8">
+                            <h5 class="bold p-2">Without talent</h5>
+                            <img class="compare-img" src="./imgs/compare1.svg" alt="compare">
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="error-img" src="./imgs/error.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.</span>
+                            </div>
+                        </div>
+                        <div class="with-talent col-10 col-sm-8">
+                            <h5 class="bold p-2">With talent</h5>
+                            <img class="compare-img" src="./imgs/compare2.svg" alt="compare">
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Difficulty in sourcing qualified candidates efficiently.</span>
+                            </div>
+                            <div class="d-flex align-items-start justify-content-start px-2 py-1 mb-0">
+                                <img class="check-img" src="./imgs/check.svg" alt="error">
+                                <span class="text-start md-body regular text-compare">Challenges in integrating new hires into remote or hybrid work environments.
+                                    Challenges in integrating new hires into remote or hybrid work environments.Challenges in integrating new hires into remote or hybrid work environments.Challenges in integrating new hires into remote or hybrid work environments.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ta-why-choose container effect-show">
+            <div class="title-section">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">Why choose talent</span>
+                </div>
+                <h4 class="bold title-why-choose m-auto">Discover the unparalleled benefits that set us apart in the recruitment industry</h4>
+            </div>
+            <div class="list-item row">
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose1.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">Efficient Recruitment</div>
+                    <p class="md-body regular items-text mb-0">Drastically reduce the time spent on recruitment tasks, from job description creation to candidate screening.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose2.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">Data-Driven Decision Making</div>
+                    <p class="md-body regular items-text mb-0">Make informed hiring decisions, backed by AI-powered insights and analytics.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose3.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">Exceptional User Experience</div>
+                    <p class="md-body regular items-text mb-0">Enjoy a seamless and intuitive user experience, designed with HR professionals in mind.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose4.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">Streamlined Processes</div>
+                    <p class="md-body regular items-text mb-0">Automate repetitive tasks, freeing up your team to focus on strategic hiring initiatives.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose5.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">AI Privacy and Trust</div>
+                    <p class="md-body regular items-text mb-0">Rely on our ethical AI practices and robust privacy measures to protect your data and ensure unbiased hiring practices.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item">
+                    <img src="./imgs/whychose6.svg" alt="why_chose">
+                    <div class="lg-body semi mb-sm-1">Comprehensive Onboarding</div>
+                    <p class="md-body regular items-text mb-0">Ensure a smooth onboarding process for all work environments, from remote to hybrid.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="ta-testimonials effect-show">
+            <div class="title-section">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">Testimonials</span>
+                </div>
+                <h4 class="bold title-why-choose m-auto">Recommended by the world's professionals</h4>
+            </div>
+            <div class="list-item row">
+                <div class="col-sm-6 col-lg-3  wrapper-item mb-lg-2 mb-lg-3 p-lg-2 ">
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“talent is a great fit for our growing startup needs. The interface and platform is actually modern and user-friendly.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“From resume parsing to onboarding, talent has transformed our recruitment workflow.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-img-1">
+                        <img class="custom-img-big" src="./imgs/custom-img3.svg" alt="">
+                        <img class="custom-img-small" src="./imgs/custom-img3.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3  wrapper-item mb-lg-2 mb-lg-3 p-lg-2 ">
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“Game-changing! talent’s JD creation and integration features are top-notch.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“talent is actually the best-class AI-powered hiring platform for remote company”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-img-2">
+                        <img class="w-100" src="./imgs/custom-img2.svg" alt="">
+                        <img class="custom-img-small" src="./imgs/custom-img3.svg" alt="">
+                        <img class="custom-img-big" src="./imgs/custom-img3.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3  d-none d-lg-block wrapper-item mb-2 mb-lg-3 p-2">
+                    <div class="custom-img-3">
+                        <img class="custom-img-big" src="./imgs/custom-img3.svg" alt="">
+                        <img class="custom-img-small" src="./imgs/custom-img3.svg" alt="">
+                        <img class="w-75" src="./imgs/custom-img1.svg" alt="">
+                    </div>
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“Automation features of talent took the stress out of our hiring process.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“The detailed reporting and metrics provided by talent gave us actionable insights to refine our hiring strategies. ”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 d-none d-lg-block wrapper-item mb-2 mb-lg-3 p-2">
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“talent’s talent pool feature has expanded our candidate reach, bringing in top-tier talent effortlessly.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex mb-1 mb-lg-2 align-items-center">
+                            <img class="me-1" src="./imgs/avatar1.svg" alt="why_chose">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="name sm-body semi my-1 my-lg-2">Efficient Recruitment</div>
+                                <div class="job-title mb-lg-2">Efficient Recruitment</div>
+                            </div>
+                        </div>
+                        <p class="md-body regular items-text mb-0">“The integration capabilities of talent with our existing systems were seamless and highly efficient.”</p>
+                        <div class="mt-2 mt-lg-3">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                            <img src="./imgs/Star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="custom-img-4">
+                        <img class="custom-img-small" src="./imgs/custom-img3.svg" alt="">
+                        <img class="custom-img-big" src="./imgs/custom-img3.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ta-pricing effect-show">
+            <div class="title-section">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">Pricing</span>
+                </div>
+                <h4 class="bold title-why-choose m-auto">How big is your company?</h4>
+                <div class="sm-body regular text-center m-auto mt-1">Perfectly tailored for every stage of your growth. Get started today, no credit card needed.</div>
+            </div>
+            <div class="d-flex flex-column align-items-center pricing-content">
+                <ul class="nav nav-pills mb-4 " id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Billed Monthly</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Billed Annualy</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="list-item row">
+                            <div class="wrapper-item  col-10 col-sm-5 col-lg-3">
+                                <div class="item active">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-10 col-sm-5 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-10 col-sm-5 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-10 col-sm-5 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="list-item row">
+                            <div class="wrapper-item  col-12 col-sm-6 col-lg-3">
+                                <div class="item ">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-12 col-sm-6 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-12 col-sm-6 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                            <div class="wrapper-item col-12 col-sm-6 col-lg-3">
+                                <div class="item">
+                                    <h5 class="medium">Team</h5>
+                                    <div class="d-flex align-items-center">
+                                        <h3 class="bold mb-0">$199</h3>
+                                        <span class="sale lg-caption bold">-15%</span>
+                                    </div>
+                                    <span class="lg-caption medium time">per user/month, billed annually</span>
+                                    <p class="sm-body medium m-0 mb-sm-1">For Growing Teams</p>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">Up to 3 total users</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 workspace</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">1 GB storage capacity</span>
+                                    </div>
+                                    <div class="wrapper-feature">
+                                        <img src="./imgs/Checkprice.svg" alt="">
+                                        <span class="sm-body regular text-feature">2000 CVs storage</span>
+                                    </div>
+                                    <button class="btn-price primary-btn">Start 30-day free trial</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ta-faqs row effect-show">
+            <div class="col-12 col-md-3">
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">FAQ</span>
+                </div>
+                <h4 class="bold title-why-choose m-auto">Frequently asked questions</h4>
+            </div>
+            <div class="d-none d-lg-block col-md-1">
+            </div>
+            <div class="col-12 col-md-8 mt-3 mt-lg-0">
+                <div class="d-flex flex-column list-item">
+                    <div class="item">
+                        <div class="d-flex flex-row collapse-faq" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            <div class=" wrapper-line ">
+                                <img class="plus-icon" src="./imgs/plus.svg" alt="">
+                                <img class="horizontal-line" src="./imgs/Line.svg" alt="">
+                            </div>
+
+                            <span class="item-title ">What is talent?</span>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse mb-0 ps-4" id="multiCollapseExample1">
+                                <div class="item-content">
+                                    Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-3"></div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex flex-row collapse-faq" data-bs-toggle="collapse" role="button" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                            <div class=" wrapper-line ">
+                                <img class="plus-icon" src="./imgs/plus.svg" alt="">
+                                <img class="horizontal-line" src="./imgs/Line.svg" alt="">
+                            </div>
+
+                            <span class="item-title ">What makes talent different from other recruitment platforms?</span>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse mb-0 ps-4" id="multiCollapseExample2">
+                                <div class="item-content">
+                                    talent stands out by placing a strong emphasis on AI quality and user experience. Unlike traditional platforms that may offer basic features, talent integrates state-of-the-art AI algorithms that not only enhance recruitment speed but also ensure fairness,
+                                    reduce bias, and maintain data security throughout the hiring process. Our platform is designed to adapt to your specific recruitment needs, offering customizable solutions and comprehensive support from job posting
+                                    to onboarding.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-3"></div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex flex-row collapse-faq" data-bs-toggle="collapse" role="button" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">
+                            <div class=" wrapper-line ">
+                                <img class="plus-icon" src="./imgs/plus.svg" alt="">
+                                <img class="horizontal-line" src="./imgs/Line.svg" alt="">
+                            </div>
+
+                            <span class="item-title ">What makes talent different from other recruitment platforms?</span>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse mb-0 ps-4" id="multiCollapseExample3">
+                                <div class="item-content">
+                                    talent stands out by placing a strong emphasis on AI quality and user experience. Unlike traditional platforms that may offer basic features, talent integrates state-of-the-art AI algorithms that not only enhance recruitment speed but also ensure fairness,
+                                    reduce bias, and maintain data security throughout the hiring process. Our platform is designed to adapt to your specific recruitment needs, offering customizable solutions and comprehensive support from job posting
+                                    to onboarding.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-3"></div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex flex-row collapse-faq" data-bs-toggle="collapse" role="button" data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">
+                            <div class=" wrapper-line ">
+                                <img class="plus-icon" src="./imgs/plus.svg" alt="">
+                                <img class="horizontal-line" src="./imgs/Line.svg" alt="">
+                            </div>
+
+                            <span class="item-title ">What makes talent different from other recruitment platforms?</span>
+                        </div>
+                        <div class="col">
+                            <div class="collapse multi-collapse mb-0 ps-4" id="multiCollapseExample4">
+                                <div class="item-content">
+                                    talent stands out by placing a strong emphasis on AI quality and user experience. Unlike traditional platforms that may offer basic features, talent integrates state-of-the-art AI algorithms that not only enhance recruitment speed but also ensure fairness,
+                                    reduce bias, and maintain data security throughout the hiring process. Our platform is designed to adapt to your specific recruitment needs, offering customizable solutions and comprehensive support from job posting
+                                    to onboarding.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ta-blogs container effect-show">
+            <div>
+                <div class="wrapper-caption">
+                    <img src="./imgs/IconSection.png" alt="">
+                    <span class="lg-caption-up semi caption-text">FAQ</span>
+                </div>
+                <h4 class="bold title-why-choose m-auto">How big is your company?</h4>
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+                <div class=" readmore"><span>Read More</span> <img src="./imgs/linkicon.svg" alt=""></div>
+            </div>
+            <div class="row">
+                <div class=" col-6 col-sm-6 col-md-4 wrapper-card p-1 p-sm-2 ">
+                    <div class="card p-1 p-sm-2 p-lg-3" style="">
+                        <div class="wrapper-img-card">
+                            <img src="./imgs/blog-img.svg" class="card-img-top" alt="blog-img">
+                        </div>
+                        <div class="card-body p-0 pt-2">
+                            <p class="card-title md-body bold">Understanding Applicant Tracking Systems (ATS): How is ATS important to the recruitment and hiring process?</p>
+                            <p class="card-content sm-body regular">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class=" card-time lg-caption medium">Go somewhere <img class="hr-img mx-2" src="./imgs/hr.svg" alt="time"> <img class="card-time-img" src="./imgs/clock.svg" alt="time"> 2 minute read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-6 col-sm-6 col-md-4 wrapper-card p-1 p-sm-2 ">
+                    <div class="card p-1 p-sm-2 p-lg-3" style="">
+                        <div class="wrapper-img-card">
+                            <img src="./imgs/banner.png" class="card-img-top" alt="blog-img">
+                        </div>
+                        <div class="card-body p-0 pt-2">
+                            <p class="card-title md-body bold">Understanding Applicant Tracking Systems (ATS): How is ATS important to the recruitment and hiring process?</p>
+                            <p class="card-content sm-body regular">Some quick example text to build on the card title and make up the bulk of the card's contentSome quick example text to build on the card title and make up the bulk of the card's contentSome quick example text to build on the
+                                card title and make up the bulk of the card's contentSome quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class=" card-time lg-caption medium">Go somewhere <img class="hr-img mx-2" src="./imgs/hr.svg" alt="time"> <img class="card-time-img" src="./imgs/clock.svg" alt="time"> 2 minute read</div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-6 col-sm-6 col-md-4 wrapper-card p-1 p-sm-2 ">
+                    <div class="card p-1 p-sm-2 p-lg-3" style="">
+                        <div class="wrapper-img-card">
+                            <img src="./imgs/bookdemo.png" class="card-img-top" alt="blog-img">
+                        </div>
+                        <div class="card-body p-0 pt-2">
+                            <p class="card-title md-body bold">Understanding Applicant Tracking Systems (ATS): How is ATS important to the recruitment and hiring process?</p>
+                            <p class="card-content sm-body regular">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class=" card-time lg-caption medium">Go somewhere <img class="hr-img mx-2" src="./imgs/hr.svg" alt="time"> <img class="card-time-img" src="./imgs/clock.svg" alt="time"> 2 minute read</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ta-book-demo effect-show ">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <div class="wrapper-caption">
+                        <img src="./imgs/IconSection.png" alt="">
+                        <span class="lg-caption-up semi caption-text">Book a demo</span>
+                    </div>
+                    <h4 class="bold title-why-choose m-auto">Interested in our AI-Powered Recruitment?</h4>
+                    <img class="d-none mx-auto d-md-inline mx-md-0 mt-4 d-md-block  w-75" src="./imgs/bookdemo.png" alt="">
+                </div>
+                <div class="col-12 col-md-6 ps-md-5">
+                    <form class="form">
+                        <div class="mb-3">
+                            <label for="inputFullName" class="form-label">Full name</label>
+                            <input placeholder="Enter your name" type="fullname" class="form-control" id="inputFullName" aria-describedby="fullNameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCompanyName" class="form-label">Company Name</label>
+                            <input placeholder="Enter your company name" type="companyName" class="form-control" id="inputCompanyName" aria-describedby="companyNameHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input placeholder="abcxyz@gmail.com" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPhoneNumber" class="form-label">Phone Number</label>
+                            <input placeholder="Enter your phone number" type="phonenumber" class="form-control" id="inputPhoneNumber" aria-describedby="phonenumberHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputHowCanhelp" class="form-label">How can we help?</label>
+                            <textarea placeholder="Please share what you want us to help" type="howcanhelp" class="form-control" id="inputHowCanhelp" rows="3" aria-describedby="howcanhelp"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-md-end">
+                            <button type="submit" class="primary-btn btn-book-demo">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ta-footer ">
+        <div class="container">
+            <div class="row">
+                <div class=" col-12 col-lg-3  mb-3">
+                    <div class="d-flex flex-row justify-content-between justify-content-sm-start flex-lg-column ">
+                        <div class="mb-3 me-2 me-sm-4 me-lg-0"><img class="me-1 me-sm-2 me-md-3 me-lg-2" src="./imgs/Logofooter.svg" alt="logo"><span class="logo-text">talent</span></div>
+                        <div>
+                            <a class="phone" href="mailto:contact@talent.com">
+                                <div><img class="me-3" src="./imgs/phone.svg" alt="phone"><span class="text-footer">0123456789</span></div>
+                            </a>
+                            <a class="email-contact " href="mailto:contact@talent.com">
+                                <div><img class="me-2" src="./imgs/contact.svg" alt="contact"><span class="text-footer">contact@talent.com</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="d-block d-lg-none col-10 col-lg-3  mb-3">
+                    <h5 class="w-100">Subcribe to your newsletter</h5>
+                    <form class="form-sub row">
+                        <div class="col-12">
+                            <label for="subEmail2" class="visually-hidden">Subcribe to your newsletter</label>
+                            <input type="text" class="form-control handle-input-sub" id="subEmail2" placeholder="Your Email">
+                        </div>
+                        <div class="col-4 wrapper-btn-footer">
+                            <button type="submit" class="primary-btn wrapper-btn-footer-1">Subcribe</button>
+                        </div>
+                    </form>
+                </div> -->
+                <div class="col-4 col-lg-2">
+                    <div class="px-2 d-flex flex-column">
+                        <h5>Product</h5>
+                        <p class="text-footer">Features</p>
+                        <p class="text-footer">Pricings</p>
+                        <p class="text-footer">FAQS</p>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="px-2 d-flex flex-column">
+                        <h5>Resources</h5>
+                        <p class="text-footer">Blogs</p>
+                        <p class="text-footer">Privacy Policy</p>
+                        <p class="text-footer">Terms</p>
+                        <p class="text-footer">Sitemap</p>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="px-2 d-flex flex-column">
+                        <h5>Company</h5>
+                        <p class="text-footer">Our Story</p>
+                    </div>
+                </div>
+                <div class=" col-10 col-lg-3">
+                    <h5 class="w-100">Subcribe to your newsletter</h5>
+                    <form class="form-sub row">
+                        <div class="col-12">
+                            <label for="subEmail2" class="visually-hidden">Subcribe to your newsletter</label>
+                            <input type="text" class="form-control handle-input-sub" id="subEmail2" placeholder="Your Email">
+                        </div>
+                        <div class="col-4 wrapper-btn-footer">
+                            <button type="submit" class="primary-btn btn-footer">Subcribe</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <hr>
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+                <p class="md-body medium  text-footer">© 2024 talent, Inc. All rights reserved.</p>
+                <div class="">
+                    <img class="mx-2" src="./imgs/twicon.svg " alt="tw-icon">
+                    <img class="mx-2" src="./imgs/lkicon.svg " alt="tw-icon">
+                    <img class="mx-2" src="./imgs/ytbicon.svg " alt="tw-icon">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    ScrollReveal().reveal('.effect-show', { delay: 400 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+
+
+</body>
+
+</html>
