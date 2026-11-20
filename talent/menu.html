@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Mock menu website (child)</title>
 <style>
-  body { font-family: sans-serif; margin: 12px; }
-  .item { display: inline-block; margin: 8px; padding: 8px; border: 1px solid #888; cursor: pointer; text-align: center; }
-  .item img { width: 120px; height: 90px; display: block; }
+  body { font-family: sans-serif; padding: 16px; }
+  .item { display: inline-block; margin: 8px; padding: 8px; border: 1px solid #ccc; cursor: pointer; text-align: center; }
+  .item img { width: 160px; height: 120px; display: block; }
 </style>
 </head>
 <body>
-<h3>Mock menu website (http://127.0.0.1:8000)</h3>
-<div class="item" data-menu-code="M001"><img alt="Burger" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='90'%3E%3Crect width='120' height='90' fill='%23e67e22'/%3E%3Ctext x='60' y='50' font-size='18' text-anchor='middle' fill='white'%3EBurger%3C/text%3E%3C/svg%3E"><span>Burger (M001)</span></div>
-<div class="item" data-menu-code="M002"><img alt="Pizza" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='90'%3E%3Crect width='120' height='90' fill='%23c0392b'/%3E%3Ctext x='60' y='50' font-size='18' text-anchor='middle' fill='white'%3EPizza%3C/text%3E%3C/svg%3E"><span>Pizza (M002)</span></div>
+<h3>Mock menu</h3>
+<div class="item" data-menu-code="M001">
+  <img alt="Burger" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'&gt;&lt;rect width='160' height='120' fill='%23f4a460'/&gt;&lt;text x='80' y='65' text-anchor='middle' font-size='24'&gt;Burger&lt;/text&gt;&lt;/svg&gt;">
+  <div>Burger</div>
+</div>
+<div class="item" data-menu-code="M002">
+  <img alt="Pizza" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'&gt;&lt;rect width='160' height='120' fill='%23e9967a'/&gt;&lt;text x='80' y='65' text-anchor='middle' font-size='24'&gt;Pizza&lt;/text&gt;&lt;/svg&gt;">
+  <div>Pizza</div>
+</div>
 <script>
-  // Origin of the embedding app; passed via query string to avoid using '*'
-  var parentOrigin = new URLSearchParams(location.search).get('parentOrigin');
+  // Target origin of the parent (the app) is passed via ?parentOrigin=
+  // Fallbacks (test harness only): ancestorOrigins, then '*' so a missing/mismatched param never drops the message silently
+  var parentOrigin = new URLSearchParams(location.search).get('parentOrigin') ||
+    (location.ancestorOrigins && location.ancestorOrigins[0]) || '*';
+  console.log('[menu] parentOrigin =', parentOrigin, 'inIframe =', window.parent !== window);
 
-  /** Detect the clicked menu item (even when the image itself is clicked) and notify the parent. */
+  /** Sends the clicked menu item (code, image, clicked tag) to the parent window. */
   document.addEventListener('click', function (e) {
-    console.log('[menu] click target=', e.target.tagName, e.target);
-    var el = e.target.closest('[data-menu-code]');
-    if (!el || !parentOrigin) {
-      console.log('[menu] ignored: no menu item or parentOrigin missing, parentOrigin=', parentOrigin);
-      return;
-    }
-    var img = el.querySelector('img');
-    var payload = {
+    console.log('[menu] click', e.target);
+    var item = e.target.closest('[data-menu-code]');
+    if (!item) { console.log('[menu] ignored (not a menu item)'); return; }
+    var img = item.querySelector('img');
+    var msg = {
       type: 'menuSelect',
-      menuCode: el.dataset.menuCode,
-      imageUrl: img ? img.src : null,
+      menuCode: item.getAttribute('data-menu-code'),
+      imageUrl: img ? img.src : '',
       clickedTag: e.target.tagName
     };
-    console.log('[menu] postMessage ->', parentOrigin, payload);
-    window.parent.postMessage(payload, parentOrigin);
+    console.log('[menu] postMessage ->', parentOrigin, msg);
+    window.parent.postMessage(msg, parentOrigin);
   });
-  console.log('[menu] loaded, listening click. parentOrigin=', parentOrigin);
 </script>
 </body>
 </html>
