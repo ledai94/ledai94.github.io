@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>menu2 - iframe menu picker</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 12px; background: #fafafa; }
+  h1 { font-size: 18px; margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .card { border: 3px solid #ddd; border-radius: 8px; background: #fff; padding: 6px; text-align: center; cursor: pointer; }
+  .card.selected { border-color: #e60012; }
+  .card .img { height: 90px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #888; }
+  .card img { max-width: 100%; max-height: 90px; }
+  .row { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  input { padding: 6px; font-size: 14px; }
+  button { padding: 10px 24px; font-size: 16px; }
+  #log { background: #222; color: #9f9; font: 12px monospace; padding: 8px; height: 140px; overflow: auto; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<h1>メニューを選択してください</h1>
+<div id="grid" class="grid"></div>
+
+<div class="row">
+  menu_id: <input id="menuId" size="10">
+  image: <input id="image" size="22">
+  <button id="submit">Submit</button>
+</div>
+<div id="log"></div>
+
+<script>
+// Edit this list to match real MENU_CD / IMAGE_FILE values in the app DB.
+var MENUS = [
+  { menu_id: '1001', name: 'Menu 1001', image: '1001.png' },
+  { menu_id: '1002', name: 'Menu 1002', image: '1002.png' },
+  { menu_id: '1003', name: 'Menu 1003', image: '1003.png' }
+];
+
+var logEl = document.getElementById('log');
+function log(msg) {
+  logEl.textContent += new Date().toLocaleTimeString() + ' ' + msg + '\n';
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+var grid = document.getElementById('grid');
+MENUS.forEach(function (m) {
+  var d = document.createElement('div');
+  d.className = 'card';
+  d.innerHTML = '<div class="img"><img alt="' + m.image + '" src="' + m.image + '" onerror="this.remove()"></div>' +
+                '<div>' + m.name + '</div><small>' + m.menu_id + ' / ' + m.image + '</small>';
+  d.onclick = function () {
+    [].forEach.call(document.querySelectorAll('.card'), function (c) { c.classList.remove('selected'); });
+    d.classList.add('selected');
+    document.getElementById('menuId').value = m.menu_id;
+    document.getElementById('image').value = m.image;
+  };
+  grid.appendChild(d);
+});
+
+document.getElementById('submit').onclick = function () {
+  var menuId = document.getElementById('menuId').value.trim();
+  var image = document.getElementById('image').value.trim();
+  if (!menuId) { log('select a menu first'); return; }
+  var json = JSON.stringify({ menu_id: menuId, image: image });
+  if (window.NativeBridge && typeof window.NativeBridge.postMessage === 'function') {
+    window.NativeBridge.postMessage(json);
+    log('NativeBridge.postMessage ' + json);
+  } else if (window.parent && window.parent !== window) {
+    window.parent.postMessage({ type: 'menu-selected', menu_id: menuId, image: image }, '*');
+    log('NativeBridge not found, fallback parent.postMessage ' + json);
+  } else {
+    log('NativeBridge not available (not running inside the app): ' + json);
+  }
+};
+
+if (window.NativeBridge) {
+  log('NativeBridge detected');
+  window.NativeBridge.onmessage = function (e) { log('reply: ' + (e && e.data)); };
+} else {
+  log('NativeBridge not detected');
+}
+</script>
+</body>
+</html>
