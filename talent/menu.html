@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Mock menu website (child)</title>
+<style>
+  body { font-family: sans-serif; margin: 12px; }
+  .item { display: inline-block; margin: 8px; padding: 8px; border: 1px solid #888; cursor: pointer; text-align: center; }
+  .item img { width: 120px; height: 90px; display: block; }
+</style>
+</head>
+<body>
+<h3>Mock menu website (http://127.0.0.1:8000)</h3>
+<div class="item" data-menu-code="M001"><img alt="Burger" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='90'%3E%3Crect width='120' height='90' fill='%23e67e22'/%3E%3Ctext x='60' y='50' font-size='18' text-anchor='middle' fill='white'%3EBurger%3C/text%3E%3C/svg%3E"><span>Burger (M001)</span></div>
+<div class="item" data-menu-code="M002"><img alt="Pizza" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='90'%3E%3Crect width='120' height='90' fill='%23c0392b'/%3E%3Ctext x='60' y='50' font-size='18' text-anchor='middle' fill='white'%3EPizza%3C/text%3E%3C/svg%3E"><span>Pizza (M002)</span></div>
+<script>
+  // Origin of the embedding app; passed via query string to avoid using '*'
+  var parentOrigin = new URLSearchParams(location.search).get('parentOrigin');
+
+  /** Detect the clicked menu item (even when the image itself is clicked) and notify the parent. */
+  document.addEventListener('click', function (e) {
+    console.log('[menu] click target=', e.target.tagName, e.target);
+    var el = e.target.closest('[data-menu-code]');
+    if (!el || !parentOrigin) {
+      console.log('[menu] ignored: no menu item or parentOrigin missing, parentOrigin=', parentOrigin);
+      return;
+    }
+    var img = el.querySelector('img');
+    var payload = {
+      type: 'menuSelect',
+      menuCode: el.dataset.menuCode,
+      imageUrl: img ? img.src : null,
+      clickedTag: e.target.tagName
+    };
+    console.log('[menu] postMessage ->', parentOrigin, payload);
+    window.parent.postMessage(payload, parentOrigin);
+  });
+  console.log('[menu] loaded, listening click. parentOrigin=', parentOrigin);
+</script>
+</body>
+</html>
