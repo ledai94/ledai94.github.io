@@ -4,21 +4,28 @@
 <meta charset="utf-8">
 <title>Mock menu website (child)</title>
 <style>
-  body { font-family: sans-serif; padding: 16px; }
-  .item { display: inline-block; margin: 8px; padding: 8px; border: 1px solid #ccc; cursor: pointer; text-align: center; }
-  .item img { width: 160px; height: 120px; display: block; }
+  body { font-family: sans-serif; margin: 0; padding: 12px; background: #fafafa; }
+  h1 { font-size: 18px; margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .card { border: 3px solid #ddd; border-radius: 8px; background: #fff; padding: 6px; text-align: center; cursor: pointer; }
+  .card.selected { border-color: #e60012; }
+  .card .img { height: 90px; background: #eee; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #888; }
+  .card img { max-width: 100%; max-height: 90px; }
+  .row { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  input { padding: 6px; font-size: 14px; }
+  button { padding: 10px 24px; font-size: 16px; }
+  #log { background: #222; color: #9f9; font: 12px monospace; padding: 8px; height: 140px; overflow: auto; white-space: pre-wrap; }
 </style>
 </head>
 <body>
-<h3>Mock menu</h3>
-<div class="item" data-menu-code="M001">
-  <img alt="Burger" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'&gt;&lt;rect width='160' height='120' fill='%23f4a460'/&gt;&lt;text x='80' y='65' text-anchor='middle' font-size='24'&gt;Burger&lt;/text&gt;&lt;/svg&gt;">
-  <div>Burger</div>
+<h1>メニューを選択してください</h1>
+<div id="grid" class="grid"></div>
+
+<div class="row">
+  image: <input id="image" size="22">
+  <button id="submitBtn" type="button">Submit</button>
 </div>
-<div class="item" data-menu-code="M002">
-  <img alt="Pizza" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='160' height='120'&gt;&lt;rect width='160' height='120' fill='%23e9967a'/&gt;&lt;text x='80' y='65' text-anchor='middle' font-size='24'&gt;Pizza&lt;/text&gt;&lt;/svg&gt;">
-  <div>Pizza</div>
-</div>
+<div id="log"></div>
 <script>
   // Target origin of the parent (the app) is passed via ?parentOrigin=
   // Fallbacks (test harness only): ancestorOrigins, then '*' so a missing/mismatched param never drops the message silently
@@ -26,21 +33,40 @@
     (location.ancestorOrigins && location.ancestorOrigins[0]) || '*';
   console.log('[menu] parentOrigin =', parentOrigin, 'inIframe =', window.parent !== window);
 
-  /** Sends the clicked menu item (code, image, clicked tag) to the parent window. */
-  document.addEventListener('click', function (e) {
-    console.log('[menu] click', e.target);
-    var item = e.target.closest('[data-menu-code]');
-    if (!item) { console.log('[menu] ignored (not a menu item)'); return; }
-    var img = item.querySelector('img');
-    var msg = {
-      type: 'menuSelect',
-      menuCode: item.getAttribute('data-menu-code'),
-      imageUrl: img ? img.src : '',
-      clickedTag: e.target.tagName
+  var MENUS = [
+    { name: 'Menu 1001', image: '1001.png' },
+    { name: 'Menu 1002', image: '1002.png' },
+    { name: 'Menu 1003', image: '1003.png' }
+  ];
+
+  var logEl = document.getElementById('log');
+  function log(msg) {
+    logEl.textContent += new Date().toLocaleTimeString() + ' ' + msg + '\n';
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  var grid = document.getElementById('grid');
+  MENUS.forEach(function (m) {
+    var d = document.createElement('div');
+    d.className = 'card';
+    d.innerHTML = '<div class="img"><img alt="' + m.image + '" src="' + m.image + '" onerror="this.remove()"></div>' +
+                  '<div>' + m.name + '</div><small>' + m.image + '</small>';
+    d.onclick = function () {
+      [].forEach.call(document.querySelectorAll('.card'), function (c) { c.classList.remove('selected'); });
+      d.classList.add('selected');
+      document.getElementById('image').value = m.image;
     };
-    console.log('[menu] postMessage ->', parentOrigin, msg);
-    window.parent.postMessage(msg, parentOrigin);
+    grid.appendChild(d);
   });
+
+  /** Posts the selected image to the parent window, restricted to parentOrigin. */
+  document.getElementById('submitBtn').onclick = function () {
+    var image = document.getElementById('image').value.trim();
+    if (!image) { log('select a menu first'); return; }
+    var msg = { type: 'menu-selected', image: image };
+    window.parent.postMessage(msg, parentOrigin);
+    log('postMessage -> ' + parentOrigin + ' ' + JSON.stringify(msg));
+  };
 </script>
 </body>
 </html>
