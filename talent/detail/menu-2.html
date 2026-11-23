@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Menu 1002</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 12px; background: #fafafa; text-align: center; }
+  img { max-width: 100%; max-height: 300px; }
+  button { padding: 10px 24px; font-size: 16px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>Menu 1002</h1>
+<img src="../1002.png" alt="1002.png">
+<div><button id="submitBtn" type="button">Submit</button></div>
+<div><a id="back" href="../list.html">&larr; Back</a></div>
+<script>
+  var IMAGE = '1002.png';
+  var parentOrigin = new URLSearchParams(location.search).get('parentOrigin') ||
+    (location.ancestorOrigins && location.ancestorOrigins[0]) || '*';
+
+  document.getElementById('back').href = '../list.html' + location.search;
+
+  document.getElementById('submitBtn').onclick = function () {
+    window.parent.postMessage({ image: IMAGE }, parentOrigin);
+  };
+
+  document.getElementById('submitBtn').hidden = window.self === window.top;
+</script>
+</body>
+</html>
