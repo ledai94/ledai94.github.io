@@ -63,10 +63,13 @@
   document.getElementById('submitBtn').onclick = function () {
     var image = document.getElementById('image').value.trim();
     if (!image) { log('select a menu first'); return; }
-    var msg = { type: 'menu-selected', image: image };
+    var msg = { image: image };
     window.parent.postMessage(msg, parentOrigin);
     log('postMessage -> ' + parentOrigin + ' ' + JSON.stringify(msg));
   };
+
+  // Submit is only useful when this page is framed; hide it when opened directly.
+  document.getElementById('submitBtn').hidden = window.self === window.top;
 </script>
 </body>
 </html>
