@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Menu list</title>
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 12px; background: #fafafa; }
+  h1 { font-size: 18px; margin: 0 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .card { border: 3px solid #ddd; border-radius: 8px; background: #fff; padding: 6px; text-align: center; cursor: pointer; }
+  .card img { max-width: 100%; max-height: 90px; }
+</style>
+</head>
+<body>
+<h1>メニューを選択してください</h1>
+<div id="grid" class="grid"></div>
+<script>
+  var MENUS = [
+    { name: 'Menu 1001', image: '1001.png', page: 'detail/menu-1.html' },
+    { name: 'Menu 1002', image: '1002.png', page: 'detail/menu-2.html' },
+    { name: 'Menu 1003', image: '1003.png', page: 'detail/menu-3.html' }
+  ];
+
+  var grid = document.getElementById('grid');
+  MENUS.forEach(function (m) {
+    var d = document.createElement('div');
+    d.className = 'card';
+    d.innerHTML = '<img alt="' + m.image + '" src="' + m.image + '"><div>' + m.name + '</div>';
+    // Redirect in the same page (keeps the iframe); the query string (e.g. parentOrigin) is preserved.
+    d.onclick = function () { location.href = m.page + location.search; };
+    grid.appendChild(d);
+  });
+</script>
+</body>
+</html>
